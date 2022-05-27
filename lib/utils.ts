@@ -13,7 +13,7 @@ interface ProductData {
 interface SiteData {
   url: (product: string) => string;
   name: string;
-  scrap: (page: Page) => Promise<ProductData>;
+  scrap: (page: Page) => Promise<RawProductData>;
 }
 
 const prepareData = ({

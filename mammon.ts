@@ -3,7 +3,7 @@ import downloadChrome from "./lib/downloadChrome.ts";
 
 import sites from "./sites/sites.ts";
 
-import { ProductData, SiteData } from "@/lib/utils.ts";
+import { ProductData, SiteData, prepareData } from "@/lib/utils.ts";
 
 import stealthScript from "@/lib/stealth.ts";
 
@@ -46,10 +46,12 @@ async function createPage({
     waitUntil: "networkidle2",
   });
 
-  let result;
+  let result: ProductData;
 
   try {
-    result = await siteData.scrap(page);
+    const rawData = await siteData.scrap(page);
+
+    result = prepareData(rawData);
   } catch (_) {
     result = { productName: "not found", productPrice: Infinity };
   }

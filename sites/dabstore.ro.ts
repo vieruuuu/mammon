@@ -7,11 +7,11 @@ async function scrap(page: Page) {
     () =>
       new Promise((resolve) => {
         const productName = document.querySelectorAll(
-          "div.produse_body > div.produse_liste_filter > div.product_grid > div:nth-child(1) > div > div.npi_name > a"
+          "#ct-box-629483 > div.box-col2.clearfix > div.row.v2 > a > h2"
         )[0].textContent;
 
         const productPrice = document.querySelectorAll(
-          "div.produse_body > div.produse_liste_filter > div.product_grid > div:nth-child(1) > div > div.npi_price > div > div > span.real_price"
+          "#ct-box-629483 > div.box-col2.clearfix > div.box-col2-inner > div.box-col3 > div.row.v4 > p.pret"
         )[0].textContent;
 
         return resolve({
@@ -26,6 +26,6 @@ async function scrap(page: Page) {
 
 export default {
   scrap,
-  name: "evomag.ro",
-  url: (product: string) => `https://www.evomag.ro/?sn.q=${product}`,
+  name: "dabstore.ro",
+  url: (product: string) => `https://www.dabstore.ro/search/${product}`,
 };

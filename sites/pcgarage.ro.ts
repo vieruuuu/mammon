@@ -1,6 +1,6 @@
 import { Page } from "puppeteer";
 
-import { prepareData, RawProductData } from "@/lib/utils.ts";
+import { RawProductData } from "@/lib/utils.ts";
 
 async function scrap(page: Page) {
   const res = await page.evaluate(
@@ -32,7 +32,7 @@ async function scrap(page: Page) {
       })
   );
 
-  return prepareData(res as RawProductData);
+  return res as RawProductData;
 }
 
 export default {

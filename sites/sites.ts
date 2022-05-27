@@ -6,5 +6,16 @@ import cel from "./cel.ro.ts";
 import ipon from "./ipon.ro.ts";
 import evomag from "./evomag.ro.ts";
 import itarena from "./itarena.ro.ts";
+import dabstore from "./dabstore.ro.ts";
 
-export default [pcgarage, emag, flax, vexio, cel, ipon, evomag, itarena];
+export default [
+  pcgarage,
+  emag,
+  flax,
+  vexio,
+  cel,
+  ipon,
+  evomag,
+  itarena,
+  dabstore,
+];
