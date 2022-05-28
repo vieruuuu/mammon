@@ -8,6 +8,8 @@ import evomag from "./evomag.ro.ts";
 import itarena from "./itarena.ro.ts";
 import dabstore from "./dabstore.ro.ts";
 
+export { pcgarage, emag, flax, vexio, cel, ipon, evomag, itarena, dabstore };
+
 export default [
   pcgarage,
   emag,
