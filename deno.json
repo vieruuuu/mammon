@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
     "lib": ["dom", "deno.ns"]
-  }
+  },
+  "importMap": "import.map.json"
 }

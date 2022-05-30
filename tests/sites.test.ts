@@ -1,4 +1,4 @@
-import { assertEquals } from "https://deno.land/std@0.141.0/testing/asserts.ts";
+import { assertEquals } from "std/testing/asserts.ts";
 import puppeteer from "puppeteer";
 
 import { scrapPageForTest } from "./lib.ts";

@@ -1,1 +1,1 @@
-deno run -A --unstable --import-map import.map.json mammon.ts
+deno run -A --unstable mammon.ts
